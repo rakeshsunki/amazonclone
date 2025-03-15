@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #232F3E;
+    color: white;
+    justify-content: space-around;
+    padding: 2rem 5rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Responsive: Stack items for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+.fbox {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    width: 10rem;
+    margin-bottom: 1rem;
+    /* Spacing between boxes */
+}
+
+h6 {
+    font-weight: 600;
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+    margin: 0.2rem;
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+/* Amazon Logo Section */
+.logo {
+    width: 100%;
+    background-color: #232F3E;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid white;
+}
+
+.logo img {
+    width: 5rem;
+}
+
+/* Responsive Logo Size */
+@media (max-width: 768px) {
+    .logo img {
+        width: 4rem;
+    }
+}
+
+/* Footer End Section */
+.end {
+    background-color: #0f1111;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    font-size: small;
+}
+
+/* Make text smaller on very small screens */
+@media (max-width: 480px) {
+    .end {
+        font-size: x-small;
+    }
+}

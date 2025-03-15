@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    font-family: Arial;
+    border: border-box;
+}
+#root {
+    background-color: #e2e7e6;
+    margin: 0;
+    padding: 0;
+    --button-color:rgb(255, 217, 0);
+}
+@import "tailwindcss";
