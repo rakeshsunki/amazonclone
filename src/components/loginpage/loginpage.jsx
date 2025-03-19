@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const Login = () => {
   return (
-    <div className="h-screen justify-items-center">
+    <div className="h-screen !justify-items-center">
       <img src="./AmazonBlacklogo.webp" className="h-[7rem] inline"></img>
       <span>.in</span>
 
