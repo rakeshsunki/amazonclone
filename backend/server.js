@@ -4,10 +4,13 @@ const router = jsonServer.router("items.json");
 const middlewares = jsonServer.defaults();
 const cors = require("cors");
 
+// Enable CORS
+server.use(cors());
 server.use(middlewares);
 server.use(router);
-app.use(cors());
-server.listen(5000, () => {
-  console.log("JSON Server is running on port 5000");
-});
 
+// Use Render-assigned PORT (Default: 5000 if running locally)
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => {
+  console.log(`Amazon Clone JSON Server is running on port ${PORT}`);
+});
