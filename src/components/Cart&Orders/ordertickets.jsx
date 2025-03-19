@@ -4,8 +4,8 @@ import Loader from "../Loader/loader";
 const OrderTickets = ({ order }) => {
   return (
     <div className="w-[80%] text-[0.5rem] md:text-[1rem] !rounded-lg border border-gray-400">
-      <div className="bg-gray-200 flex p-4 h-[20%] items-center">
-        <div className="flex w-[70%] gap-4">
+      <div className="bg-gray-200 flex p-4 h-[20%] !items-center">
+        <div className="flex w-[70%] !gap-4">
           <span className="mr-4">
             <pre>
               ORDER PLACED <br />

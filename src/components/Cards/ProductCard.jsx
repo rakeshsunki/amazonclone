@@ -7,8 +7,8 @@ const SingleCard = ({ item }) => {
   const dispatch = useDispatch();
   return (
     <div
-      className="bg-white h-[260px] w-[160px] md:h-[450px] md:w-[310px] p-[1rem] !m-[0.7rem]"
-      style={{ boxShadow: "10px 10px 10px gray" }}
+      className="bg-white h-[260px] w-[160px] md:h-[450px] md:w-[310px] p-[1rem] m-2 !md:m-[0.7rem]"
+      style={{ boxShadow: "10px 5px 5px gray" }}
       onClick={() => {
         dispatch(FullcardActions.CLICKED(item));
         navigate("/fullcard");
@@ -17,7 +17,7 @@ const SingleCard = ({ item }) => {
       <h5>
         <b>{item.name}</b>
       </h5>
-      <center className="justify-items-center w-full object-cover">
+      <center className="!justify-items-center w-full object-cover">
         <img
           src={item.image}
           alt={item.name}
