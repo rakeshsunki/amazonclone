@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const FetchProducts=createAsyncThunk("fetch/products",
     async(category)=>{
-    const response=await(fetch(`http://localhost:5000/${category}`));
+    const response=await(fetch(`https://amazonclone-json-backend-server.onrender.com/${category}`));
     return response.json();
 })
 const productSlice=createSlice({
