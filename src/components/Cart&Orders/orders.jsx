@@ -25,7 +25,7 @@ const Orders = () => {
     return (
       <div
         className=" w-full p-0 !content-center !justify-items-center bg-white"
-        style={{ justifyItems: center }}
+        style={{ justifyItems: "center" }}
       >
         <h3>Your Orders</h3>
         {ordersMemory.map((order, index) => (
