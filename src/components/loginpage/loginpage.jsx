@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 const Login = () => {
   return (
-    <div
-      className="h-screen flex flex-col justify-center items-center"
-      style={{ justifyItems: "center" }}
-    >
+    <div className="h-screen flex flex-col justify-center items-center">
       <img src="./AmazonBlacklogo.webp" className="h-[7rem] inline"></img>
       <span>.in</span>
 

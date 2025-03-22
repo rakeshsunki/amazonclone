@@ -14,7 +14,6 @@ const Signin = () => {
           {/* //background blur */}
           <div
             className="flex flex-col justify-center bg-white w-[90%] md:w-[40%] h-max fixed top-[5%] md:top-[8%] md:left-[55%] p-[1rem] rounded-[0.2rem] z-30"
-            style={{ justifyItems: "center" }}
             onMouseEnter={() => {
               dispatch(headerActions.IN());
             }}
