@@ -23,10 +23,7 @@ const Orders = () => {
     );
   } else if (status === "Fetching Completed" && ordersMemory.length > 0) {
     return (
-      <div
-        className=" w-full p-0 !content-center !justify-items-center bg-white"
-        style={{ justifyItems: "center" }}
-      >
+      <div className=" w-full p-0 flex flex-col !justify-center !items-center bg-white">
         <h3>Your Orders</h3>
         {ordersMemory.map((order, index) => (
           <OrderTickets key={index} order={order} />
