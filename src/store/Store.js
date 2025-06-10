@@ -3,9 +3,15 @@ import SignInList from "./headerlist";
 import productSlice from "./products";
 import FullcardSlice from "./Fullcardstore";
 import CartSlice from "./cart&orders";
+
 const headerSlice=createSlice({
     name:"header",
-    initialState:{headList:{},signinstatus:"False",langStatus:"False"},
+    initialState:{
+        headList:{},
+        signinstatus:"False",
+        langStatus:"False",
+        mobileNavOpen: false  // Add this line
+    },
     reducers:{
         IN:(state)=>{
             state.headList=SignInList;
@@ -17,14 +23,20 @@ const headerSlice=createSlice({
         },
         LANGIN:(state)=>{
             state.langStatus="True";
-        
         },
         LANGOUT:(state)=>{
             state.langStatus='False';
-            
+        },
+        // Add these new reducers
+        TOGGLE_MOBILE_NAV:(state)=>{
+            state.mobileNavOpen = !state.mobileNavOpen;
+        },
+        CLOSE_MOBILE_NAV:(state)=>{
+            state.mobileNavOpen = false;
         }
     }
 });
+
 const AmazonStore=configureStore({
     reducer:{
         header:headerSlice.reducer,
@@ -33,5 +45,6 @@ const AmazonStore=configureStore({
         cart:CartSlice.reducer,
     }
 });
+
 export const headerActions=headerSlice.actions;
 export default AmazonStore;

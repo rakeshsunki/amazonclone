@@ -1,48 +1,40 @@
 import { useDispatch, useSelector } from "react-redux";
 import { headerActions } from "../../store/Store";
+
 const Language = () => {
   const { langStatus } = useSelector((store) => store.header);
   const dispatch = useDispatch();
+  
   return (
     <>
-      {langStatus == "True" ? (
+      {langStatus === "True" && (
         <>
-          <div className="w-full h-screen bg-black fixed opacity-50 z-[3]"></div>
+          <div className="w-full h-screen bg-black fixed opacity-50 z-[30]"></div>
           <div
-            className="w-max h-max flex flex-col gap-y-2 justify-center bg-white z-[50] fixed top-[5%] md:top-[8%] left-[65%] p-2 rounded-[0.2rem]"
+            className="w-max h-max flex flex-col gap-y-2 justify-center bg-white z-[50] fixed top-[5%] md:top-[8%] left-[65%] p-3 rounded shadow-lg"
             onMouseEnter={() => dispatch(headerActions.LANGIN())}
             onMouseLeave={() => dispatch(headerActions.LANGOUT())}
           >
-            <label>
-              <input type="radio" name="lang" /> <small>తెలుగు - TE</small>
-            </label>
-            <label>
-              <input type="radio" name="lang" /> <small>हिन्दी - HI</small>
-            </label>
-            <label>
-              <input type="radio" name="lang" /> <small>English - EN</small>
-            </label>
-            <label>
-              <input type="radio" name="lang" /> <small>தமிழ் -TA</small>
-            </label>
-            <label>
-              <input type="radio" name="lang" /> <small>ಕನ್ನಡ - KN</small>
-            </label>
-            <label>
-              <input type="radio" name="lang" /> <small>മലയാളം - ML</small>
-            </label>
-
-            <label>
-              <input type="radio" name="lang" /> <small>বাংলা - BN</small>
-            </label>
-
-            <label>
-              <input type="radio" name="lang" /> <small>বাংলা - MR</small>
-            </label>
+            {[
+              "తెలుగు - TE",
+              "हिन्दी - HI", 
+              "English - EN",
+              "தமிழ் - TA",
+              "ಕನ್ನಡ - KN",
+              "മലയാളം - ML",
+              "বাংলা - BN",
+              "বাংলা - MR"
+            ].map((lang, index) => (
+              <label key={index} className="flex items-center hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
+                <input type="radio" name="lang" className="mr-2" />
+                <span className="text-sm">{lang}</span>
+              </label>
+            ))}
           </div>
         </>
-      ) : null}
+      )}
     </>
   );
 };
+
 export default Language;
