@@ -61,7 +61,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Search Bar - make responsive */}
+        {/* Search Bar */}
         <div className="w-[45%] md:w-[45%] h-[65%] flex text-gray-600">
           <span className="hidden sm:flex items-center justify-center bg-[#e6e5e5] h-full w-[10%] text-xs text-black rounded-l-md">
             All
@@ -70,7 +70,7 @@ const Header = () => {
             placeholder="Search Amazon.in"
             className="w-full h-full bg-white rounded-l-md sm:rounded-l-none px-2 text-xs md:text-sm"
           />
-          <button className="w-[12%] h-full bg-[#febd69] flex items-center justify-center text-black rounded-r-md hover:bg-[#f3a847]">
+          <button className="w-[12%] h-full bg-[#febd69] flex items-center justify-center text-black !rounded-r-md hover:bg-[#f3a847]">
             <GoSearch className="text-base md:text-lg" />
           </button>
         </div>

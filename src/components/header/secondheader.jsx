@@ -15,7 +15,7 @@ const SecondHeader = () => {
   ];
 
   return (
-    <div className="h-[1rem] md:h-[2rem] bg-[#232F3E] text-white flex items-center z-10 fixed top-[4.3rem] md:top-[4rem] left-0 right-0 overflow-x-auto whitespace-nowrap px-2">
+    <div className="h-[1rem] md:h-[2rem] bg-[#232F3E] text-white flex items-center z-20 fixed top-[4.3rem] md:top-[4rem] left-0 right-0 overflow-x-auto whitespace-nowrap px-2">
       {List.map((item, index) => (
         <span
           key={index}

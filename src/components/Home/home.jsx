@@ -59,10 +59,10 @@ const HomeCarousel = () => {
   return (
     <>
       {/* Fixed top spacer for all header bars - increased for mobile */}
-      <div className="w-full h-[7.3rem] md:h-[6rem]"></div>
+      <div className="w-full h-[6.9vh] md:h-[6rem]"></div>
 
       {/* Carousel container */}
-      <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden z-[5]">
+      <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden z-[5] sm:top-[-20]">
         {/* Image slides */}
         {images.map((img, index) => (
           <div
@@ -111,11 +111,8 @@ const HomeCarousel = () => {
         </div>
       </div>
 
-      {/* Spacer between carousel and cards */}
-      <div className="w-full h-12 md:h-16 clear-both"></div>
-
       {/* Product cards section */}
-      <div className="relative z-10 pt-4">
+      <div className="relative z-10 ">
         <Cards />
       </div>
     </>

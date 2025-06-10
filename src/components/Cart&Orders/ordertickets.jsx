@@ -1,42 +1,47 @@
 import { FaRupeeSign } from "react-icons/fa";
 import TicketMain from "./Ticketmain";
 import Loader from "../Loader/loader";
+
 const OrderTickets = ({ order }) => {
   return (
-    <div className="w-[80%] text-[0.5rem] md:text-[1rem] !rounded-lg border border-gray-400">
-      <div className="bg-gray-200 flex p-4 h-[20%] !items-center">
-        <div className="flex w-[70%] !gap-4">
-          <span className="mr-4">
-            <pre>
-              ORDER PLACED <br />
-              {order.DATE_TIME}
-            </pre>
-          </span>
-          <span className="mr-4">
-            <pre>
-              TOTAL <br />
-              <FaRupeeSign className="inline" />
+    <div className="w-full md:w-[90%] lg:w-[80%] mx-auto mb-6 rounded-lg overflow-hidden border border-gray-300 shadow-sm">
+      {/* Order Header */}
+      <div className="bg-gray-100 p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+        <div className="space-y-3">
+          <div>
+            <h3 className="font-semibold text-gray-500">ORDER PLACED</h3>
+            <p className="font-medium">{order.DATE_TIME}</p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-500">TOTAL</h3>
+            <p className="font-medium flex items-center">
+              <FaRupeeSign className="mr-1" />
               {order.AMOUNT}
-            </pre>
-          </span>
-          <span>
-            <pre>
-              SHIP TO <br />
-              rakesh
-            </pre>
-          </span>
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-500">SHIP TO</h3>
+            <p className="font-medium">Rakesh</p>
+          </div>
         </div>
 
-        <span>
-          <pre>
-            ORDER ID: #{order.id}
-            <br />
-            PAYMENT METHOD: {order.payment}
-          </pre>
-        </span>
+        <div className="space-y-3 sm:text-right">
+          <div>
+            <h3 className="font-semibold text-gray-500">ORDER ID</h3>
+            <p className="font-mono">#{order.id}</p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-gray-500">PAYMENT METHOD</h3>
+            <p className="font-medium">{order.payment}</p>
+          </div>
+        </div>
       </div>
 
-      <div className="h-fit bg-white md:text-base p-4">
+      {/* Order Products */}
+      <div className="bg-white p-4 md:p-6">
         {order.PRODUCTS ? (
           order.PRODUCTS.map((product, index) => (
             <TicketMain key={index} product={product} />
@@ -45,10 +50,15 @@ const OrderTickets = ({ order }) => {
           <Loader />
         )}
       </div>
-      <div className="h-[10%] bg-white !rounded-bl-lg !rounded-br-lg border-t-[0.5px] border-gray-400 text-base pl-4">
-        Archive
+
+      {/* Order Footer */}
+      <div className="bg-white py-3 px-4 border-t border-gray-300">
+        <button className="text-blue-600 hover:text-blue-800 hover:underline font-medium">
+          Archive Order
+        </button>
       </div>
     </div>
   );
 };
+
 export default OrderTickets;

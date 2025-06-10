@@ -18,7 +18,7 @@ const Cards = () => {
     return <Loader />;
   } else if (status === "Fetching Completed") {
     return (
-      <div className="bg-gradient-to-b from-transparent via-white to-white pb-8">
+      <div className="bg-gradient-to-b from-transparent via-white to-white pb-8 mt-[-4rem]">
         <div className="max-w-[1400px] mx-auto px-2 sm:px-4">
           <h2 className="text-xl md:text-2xl font-bold mb-4 text-gray-800">
             Featured Products
